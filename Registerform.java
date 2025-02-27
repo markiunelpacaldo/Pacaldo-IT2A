@@ -188,6 +188,7 @@ public class Registerform extends javax.swing.JFrame {
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 430));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void pwdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pwdActionPerformed
@@ -214,11 +215,33 @@ public class Registerform extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+         fname.setText(null);
+       ed.setText(null);
+       pn.setText(null);
+       usn.setText(null);
+       pwd.setText(null);
+       cp.setText(null);
+
+        
+         
        
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
  
+    String fullname=fname.getText();
+    String emailaddress=ed.getText();
+    String phonenumber=pn.getText();
+   
+    String username=usn.getText();
+    String password=pwd.getText();
+    String confirmpassword=cp.getText();
+    
+    if(fullname.equals("markey12") && emailaddress.equals("markey12345")){
+        new Loginform().setVisible(true);
+        this.setVisible(false);
+        JOptionPane.showMessageDialog(null, "Account Created Successfully!");
+    }
         
     }//GEN-LAST:event_jButton1ActionPerformed
  
@@ -259,7 +282,7 @@ public class Registerform extends javax.swing.JFrame {
        pwd.setText(null);
        cp.setText(null);
 
-
+       
 
     }
     /**
